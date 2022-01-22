@@ -1,0 +1,62 @@
+<!--pages/personalInfo.wxml-->
+<view class="container">
+	<view class="content-item">
+		<view class="title">个人简介</view>
+		<view class="block-item">
+			<view>
+				<label>姓名：</label>
+				<text>代超</text>
+			</view>
+			<view>
+				<label>毕业院校：</label>
+				<text>陕西科技大学</text>
+			</view>
+		</view>
+		<view class="block-item">
+			<view>
+				<label>工作经验：</label>
+				<text>5年</text>
+			</view>
+			<view>
+				<label>电话：</label>
+				<text>15591830055</text>
+			</view>
+		</view>
+		<view>
+			<label>邮箱：</label>
+			<text>15229395912@163.com</text>
+		</view>
+		<view>
+			<label>github账号：</label>
+			<text>idiotFool</text>
+		</view>
+	</view>
+	<view class="content-item">
+		<view class="title">求职意向</view>
+		<view>
+			<label>期望薪资: </label>
+			<text>面议</text>
+		</view>
+		<view>
+			<label>期望职业：</label>
+			<text>web前端</text>
+		</view>
+	</view>
+	<view class="content-item">
+		<view class="title">专业技能</view>
+		<view wx:for="{{skills}}" wx:key="*this" class="progress-box">
+			<label>{{item.desc}}</label>
+			<progress percent="{{item.percent}}" active  stroke-width="4"></progress>		
+		</view>
+	</view>
+	<view class="content-item">
+		<view class="title">综合能力</view>
+		<canvas class="canvas" type="2d" id="myCanvas"></canvas>
+	</view>
+	<view class="content-item">
+		<view class="title">自我评价</view>
+		<view wx:for="{{selfAssessment}}" wx:key="*this">
+			<view>{{index+1}}、{{item}}</view>
+		</view>
+	</view>
+</view>
